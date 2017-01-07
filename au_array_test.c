@@ -101,7 +101,12 @@ void test_au_array_first()
 
 void test_au_array_last()
 {
-    assert(false);
+    puts("Test: We can get last element of an array.");
+    int num = 2;
+    au_array * array = au_array_create_of_length(5, sizeof(int));
+    
+    *(int *)au_array_last(array) = num;
+    assert(*(int *)au_array_last(array) == num);
 }
 
 void test_au_array_get()
